@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termux Installation Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e293b, #4f46e5);
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #111827;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #4f46e5;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .command-box {
+            background: #1e293b;
+            border-radius: 8px;
+            margin: 15px 0;
+            padding: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .command-box h3 {
+            margin-top: 0;
+            color: #60a5fa;
+        }
+
+        .command {
+            background: #111827;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            color: #60a5fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .command button {
+            background: #4f46e5;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .command button:hover {
+            background: #6366f1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #111827;
+            color: #ffffff;
+            border-top: 3px solid #4f46e5;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .download-section a {
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .download-section a:hover {
+            background: #6366f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Termux Installation Guide</h1>
+    </header>
+
+    <div class="container">
+        <p>Welcome to the Termux installation guide! Below are the commands and instructions to install Termux and necessary packages. You can copy the commands or download the entire guide for offline use.</p>
+
+        <div class="command-box">
+            <h3>Step 1: Install Termux</h3>
+            <div class="command">
+                <span>pkg update && pkg upgrade</span>
+                <button onclick="copyToClipboard('pkg update && pkg upgrade')">Copy</button>
+            </div>
+        </div>
+
+        <div class="command-box">
+            <h3>Step 2: Install Git</h3>
+            <div class="command">
+                <span>pkg install git</span>
+                <button onclick="copyToClipboard('pkg install git')">Copy</button>
+            </div>
+        </div>
+
+        <div class="command-box">
+            <h3>Step 3: Install Node.js</h3>
+            <div class="command">
+                <span>pkg install nodejs</span>
+                <button onclick="copyToClipboard('pkg install nodejs')">Copy</button>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <a href="files/termux-guide.txt" download>Download the Guide</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by <a href="https://youryoutubechannel.com" target="_blank">Your Tech Channel</a>. Happy Coding!</p>
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Command copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
